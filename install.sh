@@ -26,8 +26,6 @@ source ~/.bash_profile
 cd ~/tools/
 echo "done"
 
-
-
 #install go
 if [[ -z "$GOPATH" ]];then
 echo "It looks like go is not installed, would you like to install it now"
@@ -182,6 +180,13 @@ git clone https://github.com/danielmiessler/SecLists.git
 cd ~/tools/SecLists/Discovery/DNS/
 ##THIS FILE BREAKS MASSDNS AND NEEDS TO BE CLEANED
 cat dns-Jhaddix.txt | head -n -14 > clean-jhaddix-dns.txt
+cd ~/tools/
+echo "done"
+
+echo "installing subdomain-takeover"
+git clone https://github.com/antichown/subdomain-takeover
+cd subdomain-takeover
+pip install -r requirements.txt
 cd ~/tools/
 echo "done"
 
